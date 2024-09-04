@@ -1,0 +1,8 @@
+asgiref==3.8.1
+Cython==3.0.11
+Django==5.1.1
+happybase==1.2.0
+ply==3.11
+six==1.16.0
+sqlparse==0.5.1
+thriftpy2==0.5.2
