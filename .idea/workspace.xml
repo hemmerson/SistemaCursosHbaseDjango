@@ -1,12 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="731cbf08-631d-4002-91ff-1002d6a0eb5a" name="Changes" comment="" />
+    <list default="true" id="731cbf08-631d-4002-91ff-1002d6a0eb5a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaCursosHbaseDjango/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaCursosHbaseDjango/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaCursosHbaseDjango/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaCursosHbaseDjango/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemacursos/hbase_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/sistemacursos/hbase_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemacursos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/sistemacursos/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemacursos/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/sistemacursos/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemacursos/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/sistemacursos/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemacursos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/sistemacursos/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/hemmerson/SistemaCursosHbaseDjango.git",
+    "accountId": "12876227-b8ca-49aa-982c-35fd597124bc"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 3
 }]]></component>
@@ -20,10 +48,48 @@
   "keyToString": {
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/02216004340/PycharmProjects/SistemaCursosHbaseDjango/sistemacursos/templates",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\02216004340\PycharmProjects\SistemaCursosHbaseDjango\sistemacursos\templates" />
+      <recent name="C:\Users\02216004340\PycharmProjects\SistemaCursosHbaseDjango" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="SistemaCursosHbaseDjango" type="Python.DjangoServer" factoryName="Django server">
+      <module name="SistemaCursosHbaseDjango" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="localhost" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -40,8 +106,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1725457946637</updated>
-      <workItem from="1725457948233" duration="46000" />
+      <workItem from="1725457948233" duration="2622000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
