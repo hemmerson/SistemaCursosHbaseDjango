@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block title %}Deletar Aluno{% endblock %}
+
+{% block content %}
+  <div class="container mt-4">
+    <h2>Confirmar Exclusão</h2>
+    <p>Você está prestes a excluir o aluno: <strong>{{ obj.alunome }}</strong>. Tem certeza?</p>
+
+    <form method="post" action="{% url 'delete_aluno' numero=obj.numero_aluno %}">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-danger">Confirmar Exclusão</button>
+      <a href="{% url 'list_aluno' %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+  </div>
+{% endblock %}

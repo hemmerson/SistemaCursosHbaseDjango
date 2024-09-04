@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse
 
 from sistemacursos.forms import ProfessorForm, AlunoForm, DisciplinaForm, MatriculaForm, ProfDiscForm
-from sistemacursos.models import Professor, Aluno
+from sistemacursos.models import Professor, Aluno, Disciplina
 
 
 # Create your views here.
@@ -11,8 +11,8 @@ def index(request):
 
 # Views para Professor ==================================================================
 def list_professor(request):
-    obj = Professor.all()
-    return render(request, "professor/professor_list.html", {'obj': obj})
+    list_obj = Professor.all()
+    return render(request, "professor/professor_list.html", {'list_obj': list_obj})
 
 def create_professor(request):
     if request.method == 'POST':
@@ -54,8 +54,8 @@ def delete_professor(request, numero):
 
 # Views para Aluno ======================================================================
 def list_aluno(request):
-    obj = Aluno.all()
-    return render(request, "aluno/aluno_list.html", {'obj': obj})
+    list_obj = Aluno.all()
+    return render(request, "aluno/aluno_list.html", {'list_obj': list_obj})
 
 def create_aluno(request):
     if request.method == 'POST':
@@ -93,3 +93,45 @@ def delete_aluno(request, numero):
        else:
            return render(request, 'aluno/aluno_delete.html', {'obj': obj})
     return redirect(reverse('list_aluno'))
+
+# Views para Disciplina =================================================================
+def list_disciplina(request):
+    list_obj = Aluno.all()
+    return render(request, "disciplina/disciplina_list.html", {'list_obj': list_obj})
+
+def create_disciplina(request):
+    if request.method == 'POST':
+        form = DisciplinaForm(request.POST)
+        if form.is_valid():
+            obj = form.save(commit=False)
+            obj.save()
+            return redirect(reverse('list_professor'))
+    else:
+        form = DisciplinaForm()
+    return render(request, 'disciplina/disciplina_form.html', {'form': form})
+
+def edit_disciplina(request, numero):
+    obj = Disciplina.get(numero)
+    if not obj:
+        return redirect(reverse('list_diciplina'))
+
+    if request.method == 'POST':
+        form = DisciplinaForm(request.POST, instance=obj)
+        if form.is_valid():
+            updated_obj = form.save(commit=False)
+            updated_obj.save()
+            return redirect(reverse('list_disciplina'))
+    else:
+        form = DisciplinaForm(instance=obj)
+    return render(request, 'disciplina/disciplina_form.html', {'form': form})
+
+def delete_disciplina(request, numero):
+    obj = Disciplina.get(numero)
+    if obj:
+       if request.method == 'POST':
+           obj.delete()
+           return redirect(reverse('list_disciplina'))
+
+       else:
+           return render(request, 'disciplina/disciplina_delete.html', {'obj': obj})
+    return redirect(reverse('list_disciplina'))

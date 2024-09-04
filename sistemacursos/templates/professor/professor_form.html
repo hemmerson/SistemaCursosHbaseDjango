@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block title %}Cadastro de Professor{% endblock %}
+
+{% block content %}
+  <div class="container mt-4">
+    {% if obj %}
+      <h2>Editar Professor</h2>
+    {% else %}
+      <h2>Adicionar Novo Professor</h2>
+    {% endif %}
+
+    <form method="post" action="{% if obj %}{% url 'edit_professor' numero=obj.numero_prof %}{% else %}{% url 'create_professor' %}{% endif %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+
+      <button type="submit" class="btn btn-primary mt-3">Salvar</button>
+    </form>
+
+    <a href="{% url 'list_professor' %}" class="btn btn-secondary mt-3">Voltar para Lista</a>
+  </div>
+{% endblock %}

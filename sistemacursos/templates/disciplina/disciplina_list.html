@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Lista de Disciplinas{% endblock %}
+
+{% block content %}
+  <div class="container mt-4">
+    <h2>Lista de Disciplinas</h2>
+
+    <div class="mt-4 mb-2">
+      <a class="btn btn-primary" href="{% url 'create_disciplina' %}">Novo</a>
+    </div>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Codigo_disc</th>
+          <th>Nome Disciplina</th>
+          <th>Nome Curso</th>
+          <th>QTD Aulas</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for obj in list_obj %}
+          <tr>
+            <td>{{ obj.codigo_disc }}</td>
+            <td>{{ obj.nome_disciplina }}</td>
+            <td>{{ obj.nome_curso }}</td>
+            <td>{{ obj.qtd_aulas }}</td>
+            <td>
+              <a href="{% url 'edit_disciplina' numero=obj.codigo_disc %}" class="btn btn-primary btn-sm">Editar</a>
+              <a href="{% url 'delete_disciplina' numero=obj.codigo_disc %}" class="btn btn-danger btn-sm">Excluir</a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+  </div>
+{% endblock %}

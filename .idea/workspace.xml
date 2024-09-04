@@ -5,10 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="731cbf08-631d-4002-91ff-1002d6a0eb5a" name="Changes" comment="forms.py de todos os models prontos">
-      <change afterPath="$PROJECT_DIR$/sistemacursos/templates/aluno/aluno_delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sistemacursos/templates/aluno/aluno_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sistemacursos/templates/aluno/aluno_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemacursos/templates/disciplina/disciplina_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemacursos/templates/disciplina/disciplina_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemacursos/templates/disciplina/disciplina_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SistemaCursosHbaseDjango.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SistemaCursosHbaseDjango.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaCursosHbaseDjango/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaCursosHbaseDjango/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemacursos/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/sistemacursos/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemacursos/templates/aluno/aluno_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/sistemacursos/templates/aluno/aluno_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemacursos/templates/aluno/aluno_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/sistemacursos/templates/aluno/aluno_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemacursos/templates/aluno/aluno_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/sistemacursos/templates/aluno/aluno_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemacursos/templates/professor/professor_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/sistemacursos/templates/professor/professor_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemacursos/templates/professor/professor_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/sistemacursos/templates/professor/professor_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemacursos/templates/professor/professor_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/sistemacursos/templates/professor/professor_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemacursos/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/sistemacursos/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sistemacursos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/sistemacursos/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,21 +38,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "hemmerson"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;hemmerson&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/hemmerson/SistemaCursosHbaseDjango.git",
-    "accountId": "12876227-b8ca-49aa-982c-35fd597124bc"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/hemmerson/SistemaCursosHbaseDjango.git&quot;,
+    &quot;accountId&quot;: &quot;12876227-b8ca-49aa-982c-35fd597124bc&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2lbo4ZFYwPxE8zqGNVF8yPQZMSr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -54,7 +65,7 @@
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/02216004340/PycharmProjects/SistemaCursosHbaseDjango/sistemacursos/templates",
+    "last_opened_file_path": "/home/th-rosa/Documentos/SPI/5 - NTBD/SistemaCursosHbaseDjango/sistemacursos/templates",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -65,6 +76,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sistemacursos/templates" />
       <recent name="C:\Users\02216004340\PycharmProjects\SistemaCursosHbaseDjango\sistemacursos\templates" />
       <recent name="C:\Users\02216004340\PycharmProjects\SistemaCursosHbaseDjango" />
     </key>
@@ -112,6 +124,7 @@
       <option name="presentableId" value="Default" />
       <updated>1725457946637</updated>
       <workItem from="1725457948233" duration="6585000" />
+      <workItem from="1725478792986" duration="3556000" />
     </task>
     <task id="LOCAL-00001" summary="Commit com atualizações do models.py, settings.py e hbase_config.py">
       <option name="closed" value="true" />

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Cadastro de Disciplina{% endblock %}
+
+{% block content %}
+  <div class="container mt-4">
+    {% if obj %}
+      <h2>Editar Disciplina</h2>
+    {% else %}
+      <h2>Adicionar Nova Disciplina</h2>
+    {% endif %}
+
+    <form method="post" action="{% if obj %}{% url 'edit_disciplina' numero=obj.codigo_disc %}{% else %}{% url 'create_disciplina' %}{% endif %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+
+      <button type="submit" class="btn btn-primary mt-3">Salvar</button>
+    </form>
+
+    <a href="{% url 'list_disciplina' %}" class="btn btn-secondary mt-3">Voltar para Lista</a>
+  </div>
+{% endblock %}

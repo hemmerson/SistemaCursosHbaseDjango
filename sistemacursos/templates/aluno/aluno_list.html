@@ -1,10 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block title %}Lista de Alunos{% endblock %}
+
+{% block content %}
+  <div class="container mt-4">
+    <h2>Lista de Alunos</h2>
+
+    <div class="mt-4 mb-2">
+      <a class="btn btn-primary" href="{% url 'create_aluno' %}">Novo</a>
+    </div>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Numero_aluno</th>
+          <th>Nome</th>
+          <th>Alufrua</th>
+          <th>Alucidade</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for obj in list_obj %}
+          <tr>
+            <td>{{ obj.numero_aluno }}</td>
+            <td>{{ obj.alunome }}</td>
+            <td>{{ obj.alufrua }}</td>
+            <td>{{ obj.alucidade }}</td>
+            <td>
+              <a href="{% url 'edit_aluno' numero=obj.numero_aluno %}" class="btn btn-primary btn-sm">Editar</a>
+              <a href="{% url 'delete_aluno' numero=obj.numero_aluno %}" class="btn btn-danger btn-sm">Excluir</a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+  </div>
+{% endblock %}

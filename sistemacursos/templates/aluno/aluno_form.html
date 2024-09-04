@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block title %}Cadastro de Aluno{% endblock %}
+
+{% block content %}
+  <div class="container mt-4">
+    {% if obj %}
+      <h2>Editar Aluno</h2>
+    {% else %}
+      <h2>Adicionar Novo Aluno</h2>
+    {% endif %}
+
+    <form method="post" action="{% if obj %}{% url 'edit_aluno' numero=obj.numero_aluno %}{% else %}{% url 'create_aluno' %}{% endif %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+
+      <button type="submit" class="btn btn-primary mt-3">Salvar</button>
+    </form>
+
+    <a href="{% url 'list_aluno' %}" class="btn btn-secondary mt-3">Voltar para Lista</a>
+  </div>
+{% endblock %}
