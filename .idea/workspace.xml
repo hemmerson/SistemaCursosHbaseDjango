@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="731cbf08-631d-4002-91ff-1002d6a0eb5a" name="Changes" comment="finalização do models.py" />
+    <list default="true" id="731cbf08-631d-4002-91ff-1002d6a0eb5a" name="Changes" comment="templates professor list_professor em views.py">
+      <change afterPath="$PROJECT_DIR$/sistemacursos/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +16,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -43,6 +47,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -103,7 +108,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1725457946637</updated>
-      <workItem from="1725457948233" duration="3622000" />
+      <workItem from="1725457948233" duration="4589000" />
     </task>
     <task id="LOCAL-00001" summary="Commit com atualizações do models.py, settings.py e hbase_config.py">
       <option name="closed" value="true" />
@@ -121,7 +126,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725462023698</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="templates professor list_professor em views.py">
+      <option name="closed" value="true" />
+      <created>1725462308897</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1725462308897</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +143,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit com atualizações do models.py, settings.py e hbase_config.py" />
     <MESSAGE value="finalização do models.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="finalização do models.py" />
+    <MESSAGE value="templates professor list_professor em views.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="templates professor list_professor em views.py" />
   </component>
 </project>
