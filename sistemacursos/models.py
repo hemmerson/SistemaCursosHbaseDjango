@@ -158,101 +158,99 @@ class Disciplina(models.Model):
         ]
 
 # Model de Matricula ======================================================================
-class Matricula:
-    def __init__(self, numero_aluno, codigo_disc, ano):
-        self.numero_aluno = numero_aluno
-        self.codigo_disc = codigo_disc
-        self.ano = ano
+class Matricula(models.Model):
+    numero_aluno = models.CharField(max_length=50)
+    codigo_disc = models.CharField(max_length=50)
+    ano = models.CharField(max_length=4)
 
-    def save(self):
+    def save(self, *args, **kwargs):
         connection = get_hbase_connection()
         table = connection.table('matricula')
         table.put(
-            f"{self.numero_aluno}#{self.codigo_disc}#{self.ano}".encode(),
+            f"{self.numero_aluno}_{self.codigo_disc}_{self.ano}",
             {
+                b'info:numero_aluno': self.numero_aluno.encode(),
+                b'info:codigo_disc': self.codigo_disc.encode(),
                 b'info:ano': self.ano.encode()
             }
         )
 
-    @staticmethod
-    def get(numero_aluno, codigo_disc, ano):
+    @classmethod
+    def get(cls, numero_aluno, codigo_disc, ano):
         connection = get_hbase_connection()
         table = connection.table('matricula')
-        row = table.row(f"{numero_aluno}#{codigo_disc}#{ano}".encode())
+        row = table.row(f"{numero_aluno}_{codigo_disc}_{ano}")
         if row:
-            return Matricula(
-                numero_aluno=numero_aluno,
-                codigo_disc=codigo_disc,
-                ano=row.get(b'info:ano').decode()
+            return cls(
+                numero_aluno=row.get(b'info:numero_aluno', b'').decode(),
+                codigo_disc=row.get(b'info:codigo_disc', b'').decode(),
+                ano=row.get(b'info:ano', b'').decode()
             )
         return None
 
-    def delete(self):
+    def delete(self, *args, **kwargs):
         connection = get_hbase_connection()
         table = connection.table('matricula')
-        table.delete(f"{self.numero_aluno}#{self.codigo_disc}#{self.ano}".encode())
+        table.delete(f"{self.numero_aluno}_{self.codigo_disc}_{self.ano}")
 
-    @staticmethod
-    def all():
+    @classmethod
+    def all(cls):
         connection = get_hbase_connection()
         table = connection.table('matricula')
-        matriculas = []
-        for key, data in table.scan():
-            parts = key.decode().split('#')
-            if len(parts) == 3:
-                matriculas.append(Matricula(
-                    numero_aluno=parts[0],
-                    codigo_disc=parts[1],
-                    ano=data.get(b'info:ano', b'').decode()
-                ))
-        return matriculas
+        return [
+            cls(
+                numero_aluno=row.get(b'info:numero_aluno', b'').decode(),
+                codigo_disc=row.get(b'info:codigo_disc', b'').decode(),
+                ano=row.get(b'info:ano', b'').decode()
+            )
+            for row in table.scan()
+        ]
 
 # Model de ProfDisc =======================================================================
-class ProfDisc:
-    def __init__(self, codigo_disc, numero_prof, ano):
-        self.codigo_disc = codigo_disc
-        self.numero_prof = numero_prof
-        self.ano = ano
+class ProfDisc(models.Model):
+    codigo_disc = models.CharField(max_length=50)
+    numero_prof = models.CharField(max_length=50)
+    ano = models.CharField(max_length=4)
 
-    def save(self):
+    def save(self, *args, **kwargs):
         connection = get_hbase_connection()
         table = connection.table('profdisc')
         table.put(
-            f"{self.codigo_disc}#{self.numero_prof}#{self.ano}".encode(),
+            f"{self.codigo_disc}_{self.numero_prof}_{self.ano}",
             {
+                b'info:codigo_disc': self.codigo_disc.encode(),
+                b'info:numero_prof': self.numero_prof.encode(),
                 b'info:ano': self.ano.encode()
             }
         )
 
-    @staticmethod
-    def get(codigo_disc, numero_prof, ano):
+    @classmethod
+    def get(cls, codigo_disc, numero_prof, ano):
         connection = get_hbase_connection()
         table = connection.table('profdisc')
-        row = table.row(f"{codigo_disc}#{numero_prof}#{ano}".encode())
+        row = table.row(f"{codigo_disc}_{numero_prof}_{ano}")
         if row:
-            return ProfDisc(
-                codigo_disc=codigo_disc,
-                numero_prof=numero_prof,
-                ano=row.get(b'info:ano').decode()
+            return cls(
+                codigo_disc=row.get(b'info:codigo_disc', b'').decode(),
+                numero_prof=row.get(b'info:numero_prof', b'').decode(),
+                ano=row.get(b'info:ano', b'').decode()
             )
         return None
 
-    def delete(self):
+    def delete(self, *args, **kwargs):
         connection = get_hbase_connection()
         table = connection.table('profdisc')
-        table.delete(f"{self.codigo_disc}#{self.numero_prof}#{self.ano}".encode())
+        table.delete(f"{self.codigo_disc}_{self.numero_prof}_{self.ano}")
 
-    @staticmethod
-    def all():
+    @classmethod
+    def all(cls):
         connection = get_hbase_connection()
         table = connection.table('profdisc')
-        profdiscs = []
-        for key, data in table.scan():
-            parts = key.decode().split('#')
-            if len(parts) == 3:
-                profdiscs.append(ProfDisc(
-                    codigo_disc=parts[0],
-                    numero_prof=parts[1],
-                    ano=data.get(b'info:ano', b'').decode()
-                ))
-        return profdiscs
+        return [
+            cls(
+                codigo_disc=row.get(b'info:codigo_disc', b'').decode(),
+                numero_prof=row.get(b'info:numero_prof', b'').decode(),
+                ano=row.get(b'info:ano', b'').decode()
+            )
+            for row in table.scan()
+        ]
