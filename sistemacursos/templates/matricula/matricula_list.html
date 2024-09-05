@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Lista de Matrículas{% endblock %}
+
+{% block content %}
+  <div class="container mt-4">
+    <h2>Lista de Matrículas</h2>
+
+    <div class="mt-4 mb-2">
+      <a class="btn btn-primary" href="{% url 'create_matricula' %}">Nova Matrícula</a>
+    </div>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Nome do Aluno</th>
+          <th>Nome da Disciplina</th>
+          <th>Ano</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for obj in list_obj %}
+          <tr>
+            <td>{{ obj.aluno_nome }}</td>
+            <td>{{ obj.disciplina_nome }}</td>
+            <td>{{ obj.ano }}</td>
+            <td>
+              <a href="{% url 'edit_matricula' numero_aluno=obj.numero_aluno codigo_disc=obj.codigo_disc ano=obj.ano %}" class="btn btn-primary btn-sm">Editar</a>
+              <a href="{% url 'delete_matricula' numero_aluno=obj.numero_aluno codigo_disc=obj.codigo_disc ano=obj.ano %}" class="btn btn-danger btn-sm">Excluir</a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+  </div>
+{% endblock %}

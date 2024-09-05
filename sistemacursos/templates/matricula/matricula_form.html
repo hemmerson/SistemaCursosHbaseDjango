@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Cadastro de Matrícula{% endblock %}
+
+{% block content %}
+  <div class="container mt-4">
+    {% if obj %}
+      <h2>Editar Matrícula</h2>
+    {% else %}
+      <h2>Adicionar Nova Matrícula</h2>
+    {% endif %}
+
+    <form method="post" action="{% if obj %}{% url 'edit_matricula' numero_aluno=obj.numero_aluno codigo_disc=obj.codigo_disc ano=obj.ano %}{% else %}{% url 'create_matricula' %}{% endif %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+
+      <button type="submit" class="btn btn-primary mt-3">Salvar</button>
+    </form>
+
+    <a href="{% url 'list_matricula' %}" class="btn btn-secondary mt-3">Voltar para Lista</a>
+  </div>
+{% endblock %}

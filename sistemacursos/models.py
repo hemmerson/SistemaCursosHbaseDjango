@@ -206,6 +206,15 @@ class Matricula(models.Model):
             for row in table.scan()
         ]
 
+    def get_aluno_nome(self):
+        aluno = Aluno.get(self.numero_aluno)
+        return aluno.alunome if aluno else "Aluno não encontrado"
+
+    def get_disciplina_nome(self):
+        disciplina = Disciplina.get(self.codigo_disc)
+        return disciplina.nome_disciplina if disciplina else "Disciplina não encontrada"
+
+
 # Model de ProfDisc =======================================================================
 class ProfDisc(models.Model):
     codigo_disc = models.CharField(max_length=50)
@@ -254,3 +263,11 @@ class ProfDisc(models.Model):
             )
             for row in table.scan()
         ]
+
+    def get_professor_nome(self):
+        professor = Professor.get(self.numero_prof)
+        return professor.profnome if professor else "Professor não encontrado"
+
+    def get_disciplina_nome(self):
+        disciplina = Disciplina.get(self.codigo_disc)
+        return disciplina.nome_disciplina if disciplina else "Disciplina não encontrada"
