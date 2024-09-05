@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Cadastro de ProfDisc{% endblock %}
+
+{% block content %}
+  <div class="container mt-4">
+    {% if obj %}
+      <h2>Editar ProfDisc</h2>
+    {% else %}
+      <h2>Adicionar Nova ProfDisc</h2>
+    {% endif %}
+
+    <form method="post" action="{% if obj %}{% url 'edit_profdisc' numero_prof=obj.numero_prof codigo_disc=obj.codigo_disc ano=obj.ano %}{% else %}{% url 'create_profdisc' %}{% endif %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+
+      <button type="submit" class="btn btn-primary mt-3">Salvar</button>
+    </form>
+
+    <a href="{% url 'list_profdisc' %}" class="btn btn-secondary mt-3">Voltar para Lista</a>
+  </div>
+{% endblock %}

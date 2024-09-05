@@ -14,9 +14,18 @@ urlpatterns = [
     path('alunos/update/<str:numero>', edit_aluno, name='edit_aluno'),
     path('alunos/delete/<str:numero>', delete_aluno, name='delete_aluno'),
 
-    path('disciplinas/lista/', list_disciplina, name='list_disciplina'),
-    path('disciplinas/novo/', create_disciplina, name='create_disciplina'),
-    path('disciplinas/update/<str:numero>', edit_disciplina, name='edit_disciplina'),
-    path('disciplinas/delete/<str:numero>', delete_disciplina, name='delete_disciplina'),
+    path('matriculas/lista/', list_matricula, name='list_matricula'),
+    path('matriculas/nova/', create_matricula, name='create_matricula'),
+    path('matriculas/editar/<str:numero_aluno>/<str:codigo_disc>/<str:ano>/', edit_matricula, name='edit_matricula'),
+    path('matriculas/excluir/<str:numero_aluno>/<str:codigo_disc>/<str:ano>/', delete_matricula,
+         name='delete_matricula'),
+
+    path('profdiscs/lista/', list_profdisc, name='list_profdisc'),
+    path('profdiscs/nova/', create_profdisc, name='create_profdisc'),
+    path('profdiscs/editar/<str:numero_prof>/<str:codigo_disc>/<str:ano>/', edit_profdisc, name='edit_profdisc'),
+    path('profdiscs/excluir/<str:numero_prof>/<str:codigo_disc>/<str:ano>/', delete_profdisc,
+         name='delete_profdisc'),
+
+
 
 ]

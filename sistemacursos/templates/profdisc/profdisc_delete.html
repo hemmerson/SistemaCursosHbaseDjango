@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Deletar ProfDisc{% endblock %}
+
+{% block content %}
+  <div class="container mt-4">
+    <h2>Confirmar Exclusão</h2>
+    <p>Você está prestes a excluir a matrícula do professor <strong>{{ obj.professor_nome }}</strong> na disciplina <strong>{{ obj.disciplina_nome }}</strong> para o ano <strong>{{ obj.ano }}</strong>. Tem certeza?</p>
+
+    <form method="post" action="{% url 'delete_profdisc' numero_prof=obj.numero_prof codigo_disc=obj.codigo_disc ano=obj.ano %}">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-danger">Confirmar Exclusão</button>
+      <a href="{% url 'list_profdisc' %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+  </div>
+{% endblock %}
