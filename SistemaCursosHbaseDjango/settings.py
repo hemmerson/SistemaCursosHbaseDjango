@@ -27,8 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-HBASE_HOST = '127.0.1.1'  # Substitua pelo endereço do servidor HBase
-HBASE_PORT = 16000          # Substitua pela porta do HBase se necessário
+HBASE_HOST = 'localhost'  # Substitua pelo endereço do servidor HBase
+HBASE_PORT = 9090          # Substitua pela porta do HBase se necessário
 
 # Application definition
 

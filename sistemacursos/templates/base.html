@@ -26,10 +26,19 @@
                             <a class="nav-link" href="{% url 'index' %}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pessoa Física</a>
+                            <a class="nav-link" href="{% url 'list_professor' %}">Professor</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pessoa Jurídica</a>
+                            <a class="nav-link" href="{% url 'list_aluno' %}">Aluno</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'list_disciplina' %}">Disciplina</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'list_matricula' %}">Matrícula</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'list_profdisc' %}">ProfDisc</a>
                         </li>
                     </ul>
                 </div>

@@ -14,6 +14,11 @@ urlpatterns = [
     path('alunos/update/<str:numero>', edit_aluno, name='edit_aluno'),
     path('alunos/delete/<str:numero>', delete_aluno, name='delete_aluno'),
 
+    path('disciplinas/lista/', list_disciplina, name='list_disciplina'),
+    path('disciplinas/novo/', create_disciplina, name='create_disciplina'),
+    path('disciplinas/update/<str:numero>', edit_disciplina, name='edit_disciplina'),
+    path('disciplinas/delete/<str:numero>', delete_disciplina, name='delete_disciplina'),
+
     path('matriculas/lista/', list_matricula, name='list_matricula'),
     path('matriculas/nova/', create_matricula, name='create_matricula'),
     path('matriculas/editar/<str:numero_aluno>/<str:codigo_disc>/<str:ano>/', edit_matricula, name='edit_matricula'),

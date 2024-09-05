@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="731cbf08-631d-4002-91ff-1002d6a0eb5a" name="Changes" comment="views para matricula, finalização templates de matriculas">
-      <change afterPath="$PROJECT_DIR$/sistemacursos/templates/profdisc/profdisc_delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sistemacursos/templates/profdisc/profdisc_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sistemacursos/templates/profdisc/profdisc_list.html" afterDir="false" />
+    <list default="true" id="731cbf08-631d-4002-91ff-1002d6a0eb5a" name="Changes" comment="views para profdis, finalização templates de profdis e urls">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaCursosHbaseDjango/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaCursosHbaseDjango/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemacursos/hbase_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/sistemacursos/hbase_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemacursos/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/sistemacursos/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemacursos/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sistemacursos/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sistemacursos/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/sistemacursos/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +114,7 @@
       <option name="presentableId" value="Default" />
       <updated>1725457946637</updated>
       <workItem from="1725457948233" duration="6585000" />
-      <workItem from="1725478792986" duration="6177000" />
+      <workItem from="1725478792986" duration="7551000" />
     </task>
     <task id="LOCAL-00001" summary="Commit com atualizações do models.py, settings.py e hbase_config.py">
       <option name="closed" value="true" />
@@ -163,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725496296127</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="views para profdis, finalização templates de profdis e urls">
+      <option name="closed" value="true" />
+      <created>1725496776652</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1725496776652</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +185,7 @@
     <MESSAGE value="forms.py de todos os models prontos" />
     <MESSAGE value="views para disciplina, finalização templates de alunos e disciplinas" />
     <MESSAGE value="views para matricula, finalização templates de matriculas" />
-    <option name="LAST_COMMIT_MESSAGE" value="views para matricula, finalização templates de matriculas" />
+    <MESSAGE value="views para profdis, finalização templates de profdis e urls" />
+    <option name="LAST_COMMIT_MESSAGE" value="views para profdis, finalização templates de profdis e urls" />
   </component>
 </project>
